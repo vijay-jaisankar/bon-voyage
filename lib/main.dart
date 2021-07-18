@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'widgets.dart';
 import 'items_screen.dart';
-import 'add_items.dart';
 
 void main() {
   runApp(MyApp());
@@ -59,7 +58,10 @@ class _MyHomePageState extends State<MyHomePage> {
             Center(
               child: RoundedButton(
                 title: "Select Location",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ItemsList()));
+                },
                 colour: Colors.orange,
               ),
             )

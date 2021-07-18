@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'add_items.dart';
 
 class ItemsList extends StatefulWidget {
   const ItemsList({Key? key}) : super(key: key);
@@ -81,7 +82,10 @@ class _ItemsListState extends State<ItemsList> {
           },
         ),
         floatingActionButton: FloatingActionButton.extended(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => AddItems()));
+          },
           label: Text("Add Items"),
           icon: Icon(Icons.add),
         ),
