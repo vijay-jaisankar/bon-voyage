@@ -51,7 +51,10 @@ class _MyHomePageState extends State<MyHomePage> {
             Center(
               child: RoundedButton(
                 title: "Use Current Location",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ItemsList()));
+                },
                 colour: Colors.orange,
               ),
             ),

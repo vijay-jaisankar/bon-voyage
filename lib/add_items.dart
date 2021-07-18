@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'widgets.dart';
+import 'items_screen.dart';
 
 class AddItems extends StatefulWidget {
   const AddItems({Key? key}) : super(key: key);
@@ -10,6 +11,9 @@ class AddItems extends StatefulWidget {
 
 class _AddItemsState extends State<AddItems> {
   String name = "";
+  String lat = "";
+  String long = "";
+  String description = "";
 
   @override
   Widget build(BuildContext context) {
@@ -24,25 +28,60 @@ class _AddItemsState extends State<AddItems> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Hint("Name"),
-            InputField(),
+            InputField(
+              onchange: (input) {
+                setState(() {
+                  name = input;
+                });
+                print(name);
+              },
+            ),
             Divider(
               thickness: 2,
             ),
             Hint("Description"),
-            InputField(),
+            InputField(
+              onchange: (input) {
+                setState(() {
+                  description = input;
+                });
+              },
+            ),
             Divider(
               thickness: 2,
             ),
             Hint("Latitude"),
-            InputField(),
+            InputField(
+              onchange: (input) {
+                setState(() {
+                  lat = input;
+                });
+              },
+            ),
             Divider(
               thickness: 2,
             ),
             Hint("Longitude"),
-            InputField(),
+            InputField(
+              onchange: (input) {
+                setState(() {
+                  long = input;
+                });
+              },
+            ),
             RoundedButton(
               title: "SUBMIT",
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(
+                  context,
+                  {
+                    "latitude": lat,
+                    "longitude": long,
+                    "name": name,
+                    "description": description
+                  },
+                );
+              },
               colour: Colors.black,
             )
           ],
@@ -60,10 +99,8 @@ class _AddItemsState extends State<AddItems> {
 }
 
 class InputField extends StatelessWidget {
-  const InputField({
-    Key? key,
-  }) : super(key: key);
-
+  InputField({required this.onchange});
+  Function onchange;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -75,6 +112,9 @@ class InputField extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: TextField(
+          onChanged: (input) {
+            onchange(input);
+          },
           decoration: InputDecoration(
             border: InputBorder.none,
           ),

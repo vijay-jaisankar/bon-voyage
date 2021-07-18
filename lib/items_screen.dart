@@ -22,7 +22,7 @@ class _ItemsListState extends State<ItemsList> {
             return Padding(
               padding: const EdgeInsets.all(10.0),
               child: Card(
-                color: Colors.grey,
+                color: Colors.grey[400],
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0),
                 ),
@@ -82,9 +82,15 @@ class _ItemsListState extends State<ItemsList> {
           },
         ),
         floatingActionButton: FloatingActionButton.extended(
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => AddItems()));
+          onPressed: () async {
+            String newItem = await Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => AddItems()),
+            );
+
+            setState(() {
+              itemsList.add(newItem);
+            });
           },
           label: Text("Add Items"),
           icon: Icon(Icons.add),
