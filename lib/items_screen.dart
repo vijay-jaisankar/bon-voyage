@@ -83,7 +83,7 @@ class _ItemsListState extends State<ItemsList> {
         ),
         floatingActionButton: FloatingActionButton.extended(
           onPressed: () async {
-            String newItem = await Navigator.push(
+            dynamic newItem = await Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => AddItems()),
             );
@@ -103,16 +103,16 @@ class _ItemsListState extends State<ItemsList> {
 List itemsList = [
   {
     "id": 8,
-    "latitude": "12.56E",
-    "longitude": "132.1561N",
-    "name": "abc",
-    "description": "def1"
+    "latitude": "12.97°N",
+    "longitude": " 79.59°E",
+    "name": "Apartment",
+    "description": "hot spot"
   },
   {
     "id": 9,
-    "latitude": "12.56F",
-    "longitude": "132.1561N",
-    "name": "abc",
-    "description": "def1"
+    "latitude": "12.971°N",
+    "longitude": "78.59°E",
+    "name": "Waterfall",
+    "description": "closed due to covid"
   }
 ];

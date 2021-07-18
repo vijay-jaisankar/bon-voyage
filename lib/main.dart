@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("App Name"),
+        title: Text("SafeVoyage"),
       ),
       body: Container(
         padding: EdgeInsets.all(10),
@@ -47,7 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: TextStyle(fontSize: 32),
               ),
             ),
-            Placeholder(),
+            // Placeholder(),
+            Image.asset("images/logo.png"),
             Center(
               child: RoundedButton(
                 title: "Use Current Location",
