@@ -1,4 +1,4 @@
-# bon_voyage : https://devpost.com/software/safevoyage?ref_content=user-portfolio&ref_feature=in_progress
+# bon_voyage : https://devpost.com/software/safevoyage
 
 A new Flutter project.
 
