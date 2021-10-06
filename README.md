@@ -36,3 +36,17 @@ Integration of database with cloud cluster
 Auto Capturing location using Google Maps api (Exact coordinates)
 Lots of UI improvements
 Data verification when contributed by users
+
+# App Preview 📱
+
+## Home Screen
+![Screenshot (71)](https://user-images.githubusercontent.com/76587467/136261038-b1f219f5-4fcb-4de9-98dc-dc4b201c3364.png)
+## Use Current Location Screen
+![Screenshot (72)](https://user-images.githubusercontent.com/76587467/136261420-15341f0b-58da-42c5-96fa-858524523681.png)
+## Select Location Screen
+![Screenshot (72)](https://user-images.githubusercontent.com/76587467/136261420-15341f0b-58da-42c5-96fa-858524523681.png)
+## Add Items Screen
+![Screenshot (73)](https://user-images.githubusercontent.com/76587467/136261717-10bcfb6b-7b0f-41cb-b89a-f1aeb25e79ae.png)
+
+
+
